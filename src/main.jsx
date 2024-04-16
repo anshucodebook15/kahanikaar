@@ -9,7 +9,7 @@ import Home from "./pages/Home.jsx";
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
   },
   {
     path: "/home",
