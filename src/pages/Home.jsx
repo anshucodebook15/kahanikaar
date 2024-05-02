@@ -13,15 +13,37 @@ import klogo from "../assets/img/klogo.png";
 
 const CountBox = ({ count, label }) => {
   return (
-    <Grid item lg={3}>
+    <Grid item lg={3} md={4} sm={6} xs={6}>
       <Box bgcolor={"black"} sx={{ py: 4 }}>
         <Typography
           variant="h3"
-          sx={[{ fontSize: 60, fontWeight: 600, pb: 1 }]}
+          sx={[
+            {
+              fontSize: {
+                lg: 60,
+                md: 60,
+                sm: 60,
+                xs: 60,
+              },
+              fontWeight: 600,
+              pb: 1,
+            },
+          ]}
         >
           {count}
         </Typography>
-        <Typography variant="p" sx={{ fontSize: 20, fontWeight: 500 }}>
+        <Typography
+          variant="p"
+          sx={{
+            fontSize: {
+              lg: 20,
+              md: 20,
+              sm: 30,
+              xs: 30,
+            },
+            fontWeight: 500,
+          }}
+        >
           {label}
         </Typography>
       </Box>
@@ -33,7 +55,12 @@ export default function Home() {
   return (
     <>
       <Box bgcolor={"black"}>
-        <Grid container justifyContent={""} alignItems={"center"} spacing={""}>
+        <Grid
+          container
+          justifyContent={"center"}
+          alignItems={"center"}
+          spacing={""}
+        >
           <Grid item lg={12}>
             <Typography>
               <i>A venture by @siddhartSaxena & Team</i>
@@ -115,7 +142,7 @@ export default function Home() {
       </Box>
 
       {/* Project Section */}
-      <Box sx={{ textAlign: "center", py: 6 }}>
+      <Box sx={{ textAlign: "center", py: 12 }}>
         <Typography
           variant="h2"
           sx={[Theme.typo.h2_head, { color: "common.white", py: 2 }]}
@@ -172,6 +199,61 @@ export default function Home() {
             srcset=""
             width={"100%"}
           />
+        </Box>
+      </Box>
+
+      {/* Team Section */}
+      <Box sx={{ py: 6 }}>
+        <Box sx={{ textAlign: "center", py: 8 }}>
+          <Typography
+            variant="h2"
+            sx={[Theme.typo.h2_head, { color: "common.white", py: 2 }]}
+          >
+            Specialists
+          </Typography>
+        </Box>
+
+        <Box sx={{ py: 6 }}>
+          <Grid container justifyContent={""} spacing={""}>
+            <Grid item lg={6}>
+              <Box display={"flex"} justifyContent={"center"}>
+                <Box sx={{ overflow: "hidden", width: "70%" }}>
+                  <img
+                    src="https://miro.medium.com/v2/resize:fit:683/0*JQGt5cN0oZbo4uLV.jpg"
+                    alt=""
+                    className="img100"
+                  />
+                </Box>
+              </Box>
+            </Grid>
+            <Grid item lg={6}>
+              <Box sx={{ textAlign: "left" }}>
+                <Typography variant="h2" sx={[Theme.typo.h2_head, { p: 0 }]}>
+                  <i>Siddharth Saxena</i>
+                </Typography>
+                <Typography
+                  variant="h2"
+                  sx={[Theme.typo.body_sm, { p: 0, fontWeight: 200 }]}
+                >
+                  <i>
+                    <p>Director & Writter</p>
+                  </i>
+                </Typography>
+
+                <Typography
+                  variant="body"
+                  sx={[Theme.typo.body, { width: { lg: "40%" }}]}
+                >
+                  Storytelling is the vivid description of ideas, beliefs,
+                  personal experiences, and life- lessons through stories or
+                  narratives that evoke powerful emotions and insights.
+                  Storytelling has advantages over the communication tech-
+                  niques commonly used in organizations, be they electronic
+                  mail, reports, or formal speeches.
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
         </Box>
       </Box>
     </>

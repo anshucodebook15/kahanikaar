@@ -1,3 +1,5 @@
+
+
 export const Theme = {
   col: {
     blue: "#2420EE",
@@ -16,6 +18,7 @@ export const Theme = {
       letterSpacing: -0.3,
       lineHeight: 1.4,
       pb: 2,
+      color: "white"
       
     },
 
@@ -29,7 +32,7 @@ export const Theme = {
       fontWeight: 600,
       letterSpacing: -0.3,
       lineHeight: 1.3,
-      color: "primary.dark",
+      color: "white",
       pb: 2,
     },
 
